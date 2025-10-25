@@ -1,0 +1,194 @@
+[
+    {
+      "id": "student-visa",
+      "slug": "student-visa",
+      "name": "Student Visa",
+      "shortDesc": "Complete student visa application support",
+      "longDesc": "Comprehensive student visa assistance for international students. We guide you through the entire process from document preparation to visa approval, ensuring your study abroad dreams become reality.",
+      "inclusions": [
+        "Visa eligibility assessment",
+        "Document preparation & verification",
+        "Financial documentation support",
+        "Interview preparation & coaching",
+        "Post-approval guidance"
+      ],
+      "exclusions": [
+        "Visa application fees",
+        "Medical examination costs",
+        "Biometric appointment fees"
+      ],
+      "supportedCountries": ["USA", "Canada", "UK", "Australia", "Germany", "Netherlands", "Ireland", "New Zealand"],
+      "startingPrice": 500,
+      "durationMin": 75,
+      "faqs": [
+        {
+          "q": "How long does the student visa process take?",
+          "a": "Processing times vary by country: USA (2-4 weeks), Canada (4-8 weeks), UK (3-6 weeks), Australia (2-4 weeks)."
+        },
+        {
+          "q": "What financial documents are required?",
+          "a": "Bank statements, scholarship letters, sponsor letters, and proof of sufficient funds for tuition and living expenses."
+        }
+      ]
+    },
+    {
+      "id": "work-visa",
+      "slug": "work-visa",
+      "name": "Work Visa",
+      "shortDesc": "Professional work authorization services",
+      "longDesc": "Expert guidance for work visa applications including job search assistance, employer sponsorship, and work permit processing for skilled professionals.",
+      "inclusions": [
+        "Job search support",
+        "Employer liaison",
+        "Work permit application",
+        "Documentation assistance",
+        "Relocation guidance"
+      ],
+      "exclusions": [
+        "Job placement guarantee",
+        "Work permit fees",
+        "Relocation costs"
+      ],
+      "supportedCountries": ["USA", "Canada", "UK", "Australia", "Singapore", "UAE", "Germany", "Netherlands"],
+      "startingPrice": 500,
+      "durationMin": 60,
+      "faqs": [
+        {
+          "q": "Do I need a job offer before applying?",
+          "a": "Yes, most work visas require a valid job offer and employer sponsorship."
+        },
+        {
+          "q": "What is the success rate for work visas?",
+          "a": "Our success rate is 95% for qualified candidates with proper documentation."
+        }
+      ]
+    },
+    {
+      "id": "tourist-visa",
+      "slug": "tourist-visa",
+      "name": "Tourist Visa",
+      "shortDesc": "Quick and easy tourist visa processing",
+      "longDesc": "Fast-track tourist visa applications for leisure travel, family visits, and short-term stays in your dream destinations.",
+      "inclusions": [
+        "Application preparation",
+        "Document verification",
+        "Submission assistance",
+        "Status tracking",
+        "Collection support"
+      ],
+      "exclusions": [
+        "Visa application fees",
+        "Travel insurance",
+        "Flight bookings"
+      ],
+      "supportedCountries": ["USA", "UK", "Schengen", "Canada", "Australia", "Japan", "Singapore", "UAE"],
+      "startingPrice": 500,
+      "durationMin": 30,
+      "faqs": [
+        {
+          "q": "How quickly can I get a tourist visa?",
+          "a": "Most tourist visas can be processed within 7-15 business days."
+        },
+        {
+          "q": "What documents do I need?",
+          "a": "Passport, photographs, travel itinerary, financial documents, and accommodation proof."
+        }
+      ]
+    },
+    {
+      "id": "family-visa",
+      "slug": "family-visa",
+      "name": "Family Visa",
+      "shortDesc": "Reunite with your loved ones abroad",
+      "longDesc": "Comprehensive family visa services for spouses, children, and dependent family members to reunite with their families overseas.",
+      "inclusions": [
+        "Relationship documentation",
+        "Sponsor verification",
+        "Application preparation",
+        "Interview coaching",
+        "Family reunification support"
+      ],
+      "exclusions": [
+        "Medical examinations",
+        "Police clearance fees",
+        "Translation costs"
+      ],
+      "supportedCountries": ["USA", "Canada", "UK", "Australia", "Germany", "New Zealand", "Netherlands", "Ireland"],
+      "startingPrice": 500,
+      "durationMin": 90,
+      "faqs": [
+        {
+          "q": "What proof of relationship is required?",
+          "a": "Marriage certificates, birth certificates, and other official documents proving family relationships."
+        },
+        {
+          "q": "Can I include my children in the application?",
+          "a": "Yes, dependent children under 21 can typically be included in family visa applications."
+        }
+      ]
+    },
+    {
+      "id": "business-visa",
+      "slug": "business-visa",
+      "name": "Business Visa",
+      "shortDesc": "Business travel and investment visas",
+      "longDesc": "Specialized services for business travelers, investors, and entrepreneurs seeking international opportunities and business expansion.",
+      "inclusions": [
+        "Business plan preparation",
+        "Investment documentation",
+        "Meeting arrangements",
+        "Visa application",
+        "Business networking"
+      ],
+      "exclusions": [
+        "Business registration fees",
+        "Investment capital",
+        "Travel expenses"
+      ],
+      "supportedCountries": ["USA", "Canada", "UK", "Australia", "Singapore", "UAE", "Germany", "Netherlands"],
+      "startingPrice": 500,
+      "durationMin": 45,
+      "faqs": [
+        {
+          "q": "What is the minimum investment required?",
+          "a": "Investment requirements vary by country, typically ranging from $50,000 to $500,000."
+        },
+        {
+          "q": "Can I work with a business visa?",
+          "a": "Business visas typically allow business activities but may have restrictions on employment."
+        }
+      ]
+    },
+    {
+      "id": "immigration-consultation",
+      "slug": "immigration-consultation",
+      "name": "Immigration Consultation",
+      "shortDesc": "Expert immigration advice and planning",
+      "longDesc": "Comprehensive immigration consultation services including pathway planning, document review, and strategic guidance for your immigration journey.",
+      "inclusions": [
+        "Immigration assessment",
+        "Pathway planning",
+        "Document review",
+        "Strategy development",
+        "Ongoing support"
+      ],
+      "exclusions": [
+        "Application fees",
+        "Legal representation",
+        "Government processing fees"
+      ],
+      "supportedCountries": ["All Major Destinations"],
+      "startingPrice": 500,
+      "durationMin": 60,
+      "faqs": [
+        {
+          "q": "What does the consultation include?",
+          "a": "Initial assessment, pathway recommendations, document checklist, and strategic planning session."
+        },
+        {
+          "q": "How long is the consultation valid?",
+          "a": "Our recommendations and guidance remain valid for 6 months from the consultation date."
+        }
+      ]
+    }
+]

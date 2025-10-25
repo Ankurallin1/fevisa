@@ -1,0 +1,17 @@
+{
+  "address": "2nd Floor, Business Plaza, Connaught Place, New Delhi - 110001",
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.123456789!2d77.2090212!3d28.6139391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa9eb4d0b%3A0x717971125923e5d!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1234567890",
+  "email": "hello@visapro.example",
+  "phone": "+91 12345 67890",
+  "whatsapp": "+91 12345 67890",
+  "officeHours": {
+    "weekdays": "9:00 AM - 6:00 PM",
+    "saturday": "10:00 AM - 4:00 PM",
+    "sunday": "Closed"
+  },
+  "social": {
+    "facebook": "https://facebook.com/visapro",
+    "instagram": "https://instagram.com/visapro",
+    "linkedin": "https://linkedin.com/company/visapro"
+  }
+}

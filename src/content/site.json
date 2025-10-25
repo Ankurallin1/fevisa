@@ -1,0 +1,31 @@
+{
+  "brandName": "VisasPro Services",
+  "countryFocus": "Global",
+  "primaryColor": "#2563EB",
+  "whatsappGreen": "#25D366",
+  "whatsappNumber": "1234567890",
+  "email": "hello@eduglobalconnect.com",
+  "phone": "+1 234 567 8900",
+  "address": "Global Education Hub, International Plaza",
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "linkedin": "#",
+    "youtube": "#"
+  },
+  "nav": [
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Universities",
+      "href": "/universities"
+    },
+    {
+      "label": "Login",
+      "href": "/auth"
+    }
+  ],
+  "disclaimer": "We are an independent education consultancy and not affiliated with any government or university."
+}

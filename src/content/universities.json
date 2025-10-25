@@ -1,0 +1,130 @@
+[
+  {
+    "id": "university-of-melbourne",
+    "name": "University of Melbourne",
+    "slug": "university-of-melbourne",
+    "location": "Melbourne, Victoria",
+    "keyHighlights": [
+      "Ranked #1 in Australia and #33 globally (QS World University Rankings 2024)",
+      "Strong research programs and world-class faculty",
+      "Diverse international student community",
+      "Excellent career outcomes and industry connections",
+      "Beautiful campus in the heart of Melbourne"
+    ],
+    "tuitionRangeAud": "A$45,000 - A$65,000 per year",
+    "bestForIndianStudentsReason": "One of Australia's top-ranked universities with a strong reputation among Indian students. Offers excellent support services for international students and has a vibrant Indian student community. Known for its rigorous academic standards and strong industry connections.",
+    "url": "https://www.unimelb.edu.au"
+  },
+  {
+    "id": "university-of-sydney",
+    "name": "University of Sydney",
+    "slug": "university-of-sydney",
+    "location": "Sydney, NSW",
+    "keyHighlights": [
+      "Ranked #2 in Australia and #19 globally (QS World University Rankings 2024)",
+      "Historic campus with modern facilities",
+      "Strong international student support services",
+      "Excellent research opportunities",
+      "Prime location in Australia's largest city"
+    ],
+    "tuitionRangeAud": "A$42,000 - A$60,000 per year",
+    "bestForIndianStudentsReason": "Strong international student community and highly ranked globally. Offers comprehensive support for Indian students including cultural societies, academic assistance, and career guidance. The university has a long history of welcoming international students.",
+    "url": "https://www.sydney.edu.au"
+  },
+  {
+    "id": "monash-university",
+    "name": "Monash University",
+    "slug": "monash-university",
+    "location": "Melbourne, Victoria",
+    "keyHighlights": [
+      "Ranked #3 in Australia and #42 globally (QS World University Rankings 2024)",
+      "Popular for Engineering, Business, IT, and Medicine",
+      "Strong research focus and industry partnerships",
+      "Multiple campuses across Melbourne",
+      "Excellent student support services"
+    ],
+    "tuitionRangeAud": "A$38,000 - A$55,000 per year",
+    "bestForIndianStudentsReason": "Popular among Indian students for engineering, business, IT and strong research programs. Offers practical courses with industry connections and has a welcoming environment for international students. Known for its innovative teaching methods.",
+    "url": "https://www.monash.edu"
+  },
+  {
+    "id": "australian-national-university",
+    "name": "Australian National University (ANU)",
+    "slug": "australian-national-university",
+    "location": "Canberra, ACT",
+    "keyHighlights": [
+      "Ranked #4 in Australia and #34 globally (QS World University Rankings 2024)",
+      "Research-intensive university",
+      "Small class sizes and personalized attention",
+      "Strong focus on research and innovation",
+      "Beautiful campus in Australia's capital city"
+    ],
+    "tuitionRangeAud": "A$40,000 - A$58,000 per year",
+    "bestForIndianStudentsReason": "Research-intensive, highly regarded worldwide and a strong choice for international students. Offers excellent research opportunities and has a strong reputation for academic excellence. Perfect for students interested in research and advanced studies.",
+    "url": "https://www.anu.edu.au"
+  },
+  {
+    "id": "university-of-queensland",
+    "name": "University of Queensland (UQ)",
+    "slug": "university-of-queensland",
+    "location": "Brisbane, Queensland",
+    "keyHighlights": [
+      "Ranked #5 in Australia and #43 globally (QS World University Rankings 2024)",
+      "Excellent student life and campus culture",
+      "Strong programs in various disciplines",
+      "Welcoming environment for international students",
+      "Beautiful subtropical campus"
+    ],
+    "tuitionRangeAud": "A$35,000 - A$52,000 per year",
+    "bestForIndianStudentsReason": "Good student life, strong programs and welcoming environment for Indian students. Offers a balanced academic and social experience with excellent support services. Known for its friendly campus culture and strong international student community.",
+    "url": "https://www.uq.edu.au"
+  },
+  {
+    "id": "university-of-western-australia",
+    "name": "University of Western Australia (UWA)",
+    "slug": "university-of-western-australia",
+    "location": "Perth, WA",
+    "keyHighlights": [
+      "Ranked #6 in Australia and #72 globally (QS World University Rankings 2024)",
+      "Attractive campus with modern facilities",
+      "Strong reputation for research and teaching",
+      "Western Australia lifestyle and opportunities",
+      "Excellent support for international students"
+    ],
+    "tuitionRangeAud": "A$32,000 - A$48,000 per year",
+    "bestForIndianStudentsReason": "Attractive option for international students due to campus reputation and Western Australia lifestyle. Offers excellent value for money with lower living costs compared to Sydney and Melbourne. Strong support services for international students.",
+    "url": "https://www.uwa.edu.au"
+  },
+  {
+    "id": "university-of-adelaide",
+    "name": "University of Adelaide",
+    "slug": "university-of-adelaide",
+    "location": "Adelaide, SA",
+    "keyHighlights": [
+      "Ranked #7 in Australia and #89 globally (QS World University Rankings 2024)",
+      "Known for affordability and value",
+      "Strong student support services",
+      "High-quality research programs",
+      "Welcoming international student community"
+    ],
+    "tuitionRangeAud": "A$30,000 - A$45,000 per year",
+    "bestForIndianStudentsReason": "Known for affordability, strong student support and research quality for international students. Offers excellent value for money with lower tuition fees and living costs. Has a strong reputation for supporting international students throughout their studies.",
+    "url": "https://www.adelaide.edu.au"
+  },
+  {
+    "id": "deakin-university",
+    "name": "Deakin University",
+    "slug": "deakin-university",
+    "location": "Melbourne + Geelong, Victoria",
+    "keyHighlights": [
+      "Ranked #8 in Australia and #233 globally (QS World University Rankings 2024)",
+      "Well-regarded for practical courses",
+      "Strong student support services",
+      "Modern facilities and technology",
+      "Flexible study options"
+    ],
+    "tuitionRangeAud": "A$28,000 - A$42,000 per year",
+    "bestForIndianStudentsReason": "Well-regarded among Indian students for practical courses and student support. Offers industry-relevant programs with strong connections to employers. Known for its supportive learning environment and practical approach to education.",
+    "url": "https://www.deakin.edu.au"
+  }
+]

@@ -1,0 +1,7 @@
+[
+  { "step": 1, "title": "Discover & Explore", "desc": "We help you research universities, programs, and countries that match your goals and budget." },
+  { "step": 2, "title": "Apply to Universities", "desc": "Complete application support including essays, recommendations, and portfolio preparation." },
+  { "step": 3, "title": "Secure Admission", "desc": "Track applications, handle offers, and guide you through acceptance decisions." },
+  { "step": 4, "title": "Student Visa Process", "desc": "Comprehensive visa application support with document preparation and interview coaching." },
+  { "step": 5, "title": "Pre-Departure & Settlement", "desc": "Accommodation, orientation, and ongoing support for your new academic journey." }
+]
