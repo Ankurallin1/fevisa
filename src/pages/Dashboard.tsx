@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BookingsTable from '../components/BookingsTable';
-import DashboardWhatsAppButton from '../components/DashboardWhatsAppButton';
+// import DashboardWhatsAppButton from '../components/DashboardWhatsAppButton';
 import { RescheduleModal } from '../components/RescheduleModal';
 import { CancelBookingSelectionModal } from '../components/CancelBookingSelectionModal';
 import { useAuth } from '../lib/contexts/AuthContext';
