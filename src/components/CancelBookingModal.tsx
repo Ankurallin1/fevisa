@@ -56,7 +56,18 @@ export const CancelBookingModal: React.FC<CancelBookingModalProps> = ({
       }
     } catch (error: any) {
       console.error('CancelBookingModal: Cancel error:', error);
-      const errorMessage = error.message || 'Failed to cancel booking';
+      
+      // Extract the actual error message from the API response
+      let errorMessage = 'Failed to cancel booking';
+      
+      if (error.response?.data?.message) {
+        // Use the message from the API response
+        errorMessage = error.response.data.message;
+      } else if (error.message) {
+        // Fallback to the error message
+        errorMessage = error.message;
+      }
+      
       setError(errorMessage);
       showError('Cancellation Error', errorMessage);
     } finally {

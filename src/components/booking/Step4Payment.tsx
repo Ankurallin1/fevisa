@@ -40,6 +40,21 @@ export const Step4Payment: React.FC<Step4PaymentProps> = ({
         sessionStorage.removeItem('currentBooking');
       }
     }
+    
+    // Check if we have a booking ID from retry flow
+    const retryBookingId = sessionStorage.getItem('retryBookingId');
+    if (retryBookingId) {
+      console.log('Step4Payment: Found retry booking ID:', retryBookingId);
+      // Create a mock booking object for retry flow
+      return {
+        success: true,
+        data: {
+          id: retryBookingId,
+          // We'll populate the rest from the API call
+        }
+      };
+    }
+    
     return null;
   });
   const [showPayPal, setShowPayPal] = useState(false);
@@ -76,6 +91,15 @@ export const Step4Payment: React.FC<Step4PaymentProps> = ({
       console.log('Step4Payment: Booking already exists, showing PayPal for booking ID:', booking.data.id);
       setShowPayPal(true);
       showSuccess('Booking Found', 'Proceeding to payment for your existing booking');
+      return;
+    }
+
+    // Check if this is a retry flow with existing booking ID
+    const retryBookingId = sessionStorage.getItem('retryBookingId');
+    if (retryBookingId) {
+      console.log('Step4Payment: Retry flow detected, using existing booking ID:', retryBookingId);
+      setShowPayPal(true);
+      showSuccess('Retry Payment', 'Proceeding to payment for your existing booking');
       return;
     }
 
@@ -137,7 +161,7 @@ export const Step4Payment: React.FC<Step4PaymentProps> = ({
     clearBookingSessionData();
     
     // Use the booking ID for navigation, not the PayPal order ID
-    const bookingId = booking?.data?.id;
+    const bookingId = booking?.data?.id || sessionStorage.getItem('retryBookingId');
     if (bookingId) {
       console.log('Navigating to booking confirmation with booking ID:', bookingId);
       navigate(`/booking/confirm/${bookingId}`);
@@ -187,6 +211,7 @@ export const Step4Payment: React.FC<Step4PaymentProps> = ({
     sessionStorage.removeItem('bookingSelectedSlot');
     sessionStorage.removeItem('bookingNotes');
     sessionStorage.removeItem('bookingCurrentStep');
+    sessionStorage.removeItem('retryBookingId');
     
     // Reset component state
     setBooking(null);
@@ -312,22 +337,39 @@ export const Step4Payment: React.FC<Step4PaymentProps> = ({
       )}
 
       {/* Show PayPal Payment */}
-      {showPayPal && booking ? (
+      {showPayPal && (booking || sessionStorage.getItem('retryBookingId')) ? (
         <>
-          {console.log('Step4Payment: Rendering PayPal with booking data:', {
-            id: booking.data.id,
-            amount: booking.data.amount,
-            currency: booking.data.currency
-          })}
-          <PayPalPayment
-            key={booking.data.id} // Force re-mount when booking changes
-            bookingId={booking.data.id}
-            amount={booking.data.amount}
-            currency={booking.data.currency || pricing?.data?.currency || 'AUD'}
-            onSuccess={handlePaymentSuccess}
-            onError={handlePaymentError}
-            onCancel={handlePaymentCancel}
-          />
+          {(() => {
+            const bookingId = booking?.data?.id || sessionStorage.getItem('retryBookingId');
+            const amount = booking?.data?.amount || pricing?.data?.amount;
+            const currency = booking?.data?.currency || pricing?.data?.currency || 'AUD';
+            
+            // Ensure we have valid values before rendering PayPal
+            if (!bookingId || !amount) {
+              return <div>Loading payment details...</div>;
+            }
+            
+            // Convert amount to number if it's a string
+            const numericAmount = typeof amount === 'string' ? parseFloat(amount) : amount;
+            
+            console.log('Step4Payment: Rendering PayPal with booking data:', {
+              id: bookingId,
+              amount: amount,
+              currency: currency
+            });
+            
+            return (
+              <PayPalPayment
+                key={bookingId} // Force re-mount when booking changes
+                bookingId={bookingId}
+                amount={numericAmount}
+                currency={currency}
+                onSuccess={handlePaymentSuccess}
+                onError={handlePaymentError}
+                onCancel={handlePaymentCancel}
+              />
+            );
+          })()}
         </>
       ) : isProcessing ? (
         <div className="text-center py-8">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { bookingService } from '../lib/api/authService';
+import { api } from '../lib/api';
 import { CancelBookingModal } from './CancelBookingModal';
 
 interface Booking {
@@ -86,6 +87,66 @@ export default function BookingsTable() {
     loadBookings(); // Reload bookings
     setShowCancelModal(false);
     setSelectedBooking(null);
+  };
+
+  const handleRetryBooking = async (booking: Booking) => {
+    try {
+      // Call the same API that's used in view details
+      const response = await api.getBooking(booking.id);
+      if (response && response.success && response.data) {
+        // Store booking data in session storage for prefilling steps
+        const bookingData = response.data;
+        
+        // Create pricing data from booking
+        const pricingData = {
+          success: true,
+          data: {
+            duration: bookingData.duration,
+            amount: bookingData.amount,
+            currency: bookingData.currency
+          }
+        };
+        
+        // Create slot data for Step2
+        const slotData = {
+          startTime: bookingData.startTime,
+          endTime: bookingData.endTime,
+          available: true
+        };
+        
+        // Create availability data for Step2
+        const availabilityData = {
+          success: true,
+          data: {
+            slots: [slotData]
+          }
+        };
+        
+        // Create the bookingData object that useBookingState expects
+        const bookingStateData = {
+          pricing: pricingData,
+          selectedDate: bookingData.date,
+          availability: availabilityData,
+          selectedSlot: slotData,
+          notes: bookingData.notes || '',
+          step: 4
+        };
+        
+        // Store the complete booking state
+        sessionStorage.setItem('bookingData', JSON.stringify(bookingStateData));
+        
+        // Store the booking ID for retry flow
+        sessionStorage.setItem('retryBookingId', bookingData.id);
+        
+        // Navigate to Step4Payment with prefilled data
+        window.location.href = '/book?step=4';
+      } else {
+        setError('Failed to retry booking. Please try again.');
+      }
+    } catch (error: any) {
+      console.error('Retry booking error:', error);
+      setError(error.response?.data?.message || 'Failed to retry booking');
+    }
   };
 
   const handlePageChange = (page: number) => {
@@ -291,7 +352,15 @@ export default function BookingsTable() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <div className="flex space-x-2">
-                        {booking.canBeCancelledByUser && (
+                        {booking.status === 'pending' && (
+                          <button
+                            onClick={() => handleRetryBooking(booking)}
+                            className="text-green-600 hover:text-green-900"
+                          >
+                            Retry
+                          </button>
+                        )}
+                        {booking.status !== 'cancelled' && booking.status !== 'pending' && booking.paymentStatus !== 'failed' && (
                           <button
                             onClick={() => handleCancelBooking(booking)}
                             className="text-red-600 hover:text-red-900"
@@ -299,7 +368,7 @@ export default function BookingsTable() {
                             Cancel
                           </button>
                         )}
-                        {(
+                        {booking.status !== 'cancelled' && booking.status !== 'pending' && booking.paymentStatus !== 'failed' && booking.canBeRescheduled && (
                           <Link
                             to={`/booking/reschedule/${booking.id}`}
                             className="text-blue-600 hover:text-blue-900"

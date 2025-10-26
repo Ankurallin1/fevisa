@@ -1,15 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import BookingsTable from '../components/BookingsTable';
 // import DashboardWhatsAppButton from '../components/DashboardWhatsAppButton';
 import { RescheduleModal } from '../components/RescheduleModal';
 import { CancelBookingSelectionModal } from '../components/CancelBookingSelectionModal';
 import { useAuth } from '../lib/contexts/AuthContext';
+import { clearBookingSessionData } from '../lib/utils/sessionCleanup';
 
 export default function Dashboard() {
   const { user } = useAuth();
   const [showRescheduleModal, setShowRescheduleModal] = useState(false);
   const [showCancelModal, setShowCancelModal] = useState(false);
+
+  // Clear all session data on initial mount
+  useEffect(() => {
+    console.log('Dashboard: Clearing all session data on mount');
+    // clearAllSessionData();
+    clearBookingSessionData();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">

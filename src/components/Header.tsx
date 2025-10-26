@@ -64,7 +64,9 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {/* Public Navigation Items */}
-            {site.nav.map((item) => {
+            {site.nav
+              .filter(item => !isAuthenticated || item.label !== 'Login')
+              .map((item) => {
               if (item.variant === 'button') {
                 return (
                   <Link
@@ -167,7 +169,22 @@ export default function Header() {
                   </div>
                 )}
               </div>
-            ) : null}
+            ) : (
+              <div className="flex items-center space-x-4">
+                <Link
+                  to="/auth"
+                  className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  Sign in
+                </Link>
+                <Link
+                  to="/auth?step=signup"
+                  className="bg-primary-600 text-white hover:bg-primary-700 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  Sign up
+                </Link>
+              </div>
+            )}
 
             <button
               onClick={handleWhatsAppClick}
@@ -196,7 +213,9 @@ export default function Header() {
           <div className="md:hidden border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {/* Public Navigation Items */}
-              {site.nav.map((item) => {
+              {site.nav
+                .filter(item => !isAuthenticated || item.label !== 'Login')
+                .map((item) => {
                 if (item.variant === 'button') {
                   return (
                     <Link
@@ -290,7 +309,24 @@ export default function Header() {
                     Logout
                   </button>
                 </div>
-              ) : null}
+              ) : (
+                <div className="border-t pt-2 space-y-2">
+                  <Link
+                    to="/auth"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50"
+                  >
+                    Sign in
+                  </Link>
+                  <Link
+                    to="/auth?step=signup"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary-600 hover:bg-primary-700"
+                  >
+                    Sign up
+                  </Link>
+                </div>
+              )}
 
               <button
                 onClick={() => {

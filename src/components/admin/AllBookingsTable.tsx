@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../../lib/api';
 import { showError } from '../../lib/utils/toast';
+import { CancelBookingModal } from '../CancelBookingModal';
 
 interface Booking {
   id: string;
@@ -52,6 +54,10 @@ export const AllBookingsTable: React.FC = () => {
   const [dateFrom, setDateFrom] = useState<string>('');
   const [dateTo, setDateTo] = useState<string>('');
   const [itemsPerPage, setItemsPerPage] = useState(10);
+  
+  // Modal state
+  const [showCancelModal, setShowCancelModal] = useState(false);
+  const [selectedBooking, setSelectedBooking] = useState<Booking | null>(null);
 
   useEffect(() => {
     fetchBookings();
@@ -115,6 +121,77 @@ export const AllBookingsTable: React.FC = () => {
     setDateFrom('');
     setDateTo('');
     setCurrentPage(1);
+  };
+
+  const handleCancelBooking = (booking: Booking) => {
+    setSelectedBooking(booking);
+    setShowCancelModal(true);
+  };
+
+  const handleCancelSuccess = () => {
+    fetchBookings(); // Reload bookings
+    setShowCancelModal(false);
+    setSelectedBooking(null);
+  };
+
+  const handleRetryBooking = async (booking: Booking) => {
+    try {
+      // Call the same API that's used in view details
+      const response = await api.getBooking(booking.id);
+      if (response && response.success && response.data) {
+        // Store booking data in session storage for prefilling steps
+        const bookingData = response.data;
+        
+        // Create pricing data from booking
+        const pricingData = {
+          success: true,
+          data: {
+            duration: bookingData.duration,
+            amount: bookingData.amount,
+            currency: bookingData.currency
+          }
+        };
+        
+        // Create slot data for Step2
+        const slotData = {
+          startTime: bookingData.startTime,
+          endTime: bookingData.endTime,
+          available: true
+        };
+        
+        // Create availability data for Step2
+        const availabilityData = {
+          success: true,
+          data: {
+            slots: [slotData]
+          }
+        };
+        
+        // Create the bookingData object that useBookingState expects
+        const bookingStateData = {
+          pricing: pricingData,
+          selectedDate: bookingData.date,
+          availability: availabilityData,
+          selectedSlot: slotData,
+          notes: bookingData.notes || '',
+          step: 4
+        };
+        
+        // Store the complete booking state
+        sessionStorage.setItem('bookingData', JSON.stringify(bookingStateData));
+        
+        // Store the booking ID for retry flow
+        sessionStorage.setItem('retryBookingId', bookingData.id);
+        
+        // Navigate to Step4Payment with prefilled data
+        window.location.href = '/book?step=4';
+      } else {
+        showError('Failed to retry booking. Please try again.');
+      }
+    } catch (error: any) {
+      console.error('Retry booking error:', error);
+      showError(error.response?.data?.message || 'Failed to retry booking');
+    }
   };
 
   const formatDate = (dateString: string) => {
@@ -252,6 +329,9 @@ export const AllBookingsTable: React.FC = () => {
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Notes
                     </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Actions
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
@@ -299,6 +379,40 @@ export const AllBookingsTable: React.FC = () => {
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-900 max-w-xs truncate">
                         {booking.notes || '-'}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <div className="flex space-x-2">
+                          {booking.status === 'pending' && (
+                            <button
+                              onClick={() => handleRetryBooking(booking)}
+                              className="text-green-600 hover:text-green-900"
+                            >
+                              Retry
+                            </button>
+                          )}
+                          {booking.status !== 'cancelled' && booking.status !== 'pending' && booking.status !== 'payment_failed' && (
+                            <button
+                              onClick={() => handleCancelBooking(booking)}
+                              className="text-red-600 hover:text-red-900"
+                            >
+                              Cancel
+                            </button>
+                          )}
+                          {booking.status !== 'cancelled' && booking.status !== 'pending' && booking.status !== 'payment_failed' && booking.canBeRescheduled && (
+                            <Link
+                              to={`/admin/booking/reschedule/${booking.id}`}
+                              className="text-blue-600 hover:text-blue-900"
+                            >
+                              Reschedule
+                            </Link>
+                          )}
+                          <Link
+                            to={`/booking/confirm/${booking.id}`}
+                            className="text-primary-600 hover:text-primary-900"
+                          >
+                            View Details
+                          </Link>
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -399,6 +513,27 @@ export const AllBookingsTable: React.FC = () => {
           </>
         )}
       </div>
+
+      {/* Cancel Booking Modal */}
+      {selectedBooking && (
+        <CancelBookingModal
+          isOpen={showCancelModal}
+          onClose={() => {
+            setShowCancelModal(false);
+            setSelectedBooking(null);
+          }}
+          bookingId={selectedBooking.id}
+          bookingDetails={{
+            date: selectedBooking.date,
+            startTime: selectedBooking.startTime,
+            endTime: selectedBooking.endTime,
+            consultant: selectedBooking.consultant.name,
+            amount: selectedBooking.amount,
+            currency: selectedBooking.currency,
+          }}
+          onSuccess={handleCancelSuccess}
+        />
+      )}
     </div>
   );
 };

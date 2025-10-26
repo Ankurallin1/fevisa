@@ -21,10 +21,6 @@
     {
       "label": "Universities",
       "href": "/universities"
-    },
-    {
-      "label": "Login",
-      "href": "/auth"
     }
   ],
   "disclaimer": "We are an independent education consultancy and not affiliated with any government or university."

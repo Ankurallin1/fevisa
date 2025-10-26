@@ -104,14 +104,16 @@ export default function BookingConfirm() {
           faqs: []
         });
         setLoading(false);
-        } else {
+      } else {
         console.log('BookingConfirm: No booking data found');
         setError('Booking not found');
-          setLoading(false);
-        }
+        setLoading(false);
+      }
     } catch (error: any) {
       console.error('BookingConfirm: Error loading booking:', error);
-      setError('Failed to load booking details');
+      // Extract error message from API response if available
+      const errorMessage = error.response?.data?.message || error.message || 'Failed to load booking details';
+      setError(errorMessage);
       setLoading(false);
     }
   };
@@ -187,8 +189,8 @@ export default function BookingConfirm() {
             <Link to="/book" className="btn-primary">
               Try Booking Again
             </Link>
-            <Link to="/" className="btn-secondary ml-4">
-              Go Home
+            <Link to="/dashboard" className="btn-secondary ml-4">
+              Go dashboard
             </Link>
           </div>
         </div>
@@ -204,8 +206,8 @@ export default function BookingConfirm() {
           <p className="text-gray-600 mb-4">{error}</p>
           <p className="text-sm text-gray-500 mb-8">Reference: {ref}</p>
           <div className="space-y-4">
-            <Link to="/" className="btn-primary">
-              Go Home
+            <Link to="/dashboard" className="btn-primary">
+              Go Dashboard
             </Link>
             <button 
               onClick={() => window.location.reload()} 

@@ -42,9 +42,8 @@ export const api = {
     } catch (error: any) {
       console.error('API: Error fetching pricing:', error);
       
-      // Fallback to mock adapter if real API fails
-      console.log('API: Falling back to mock adapter for pricing');
-      return mockAdapter.getPricing();
+      // Throw error instead of returning mock data
+      throw error;
     }
   },
 
@@ -78,9 +77,8 @@ export const api = {
       return response.data;
     } catch (error: any) {
       console.error('API: Booking creation failed:', error);
-      // Fallback to mock adapter if real API fails
-      console.log('API: Falling back to mock adapter');
-      return mockAdapter.createBooking(payload);
+      // Throw error instead of returning mock data
+      throw error;
     }
   },
 
@@ -96,9 +94,8 @@ export const api = {
     } catch (error: any) {
       console.error('API: Error fetching booking:', error);
       
-      // Fallback to mock adapter if real API fails
-      console.log('API: Falling back to mock adapter');
-      return mockAdapter.getBooking(bookingId);
+      // Return null instead of falling back to mock data
+      return null;
     }
   },
 
