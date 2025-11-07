@@ -6,7 +6,7 @@ import type { Hero, Services, Process, FAQs } from '../lib/types/site';
 import HeroSection from '../components/Hero';
 import ServicesGrid from '../components/ServicesGrid';
 import ProcessSteps from '../components/ProcessSteps';
-import FAQ from '../components/FAQ';
+// import FAQ from '../components/FAQ';
 import WhyChoose from '../components/WhyChoose';
 import Testimonials from '../components/Testimonials';
 import FAQSection from '../components/FAQSection';
