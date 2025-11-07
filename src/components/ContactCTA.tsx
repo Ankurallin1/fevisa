@@ -7,7 +7,7 @@ export default function ContactCTA() {
         <h2 className="text-3xl font-bold mb-4">Ready to Study in Australia?</h2>
         <p className="text-blue-100 text-lg mb-8">Talk to our student visa experts today.</p>
         <Link to="/contact" className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-          Book a Free Consultation
+          Book Consultation
         </Link>
       </div>
     </section>

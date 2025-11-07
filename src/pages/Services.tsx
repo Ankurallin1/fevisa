@@ -37,7 +37,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Services | University Selection, Admissions, Visa | Syona</title>
+        <title>Services | University Selection, Admissions, Visa | Studypath education</title>
         <meta name="description" content="Personalized university and course selection, application assistance, Subclass 500 student visa support, scholarships, and IELTS/PTE prep for Indian students." />
       </Helmet>
       <div className="bg-gradient-to-br from-blue-600 to-purple-700 text-white">

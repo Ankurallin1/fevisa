@@ -52,8 +52,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Study in Australia | Student Visa Experts | Syona Group of Consultants</title>
-        <meta name="description" content="Syona helps Indian students study in Australia — admissions, scholarships, and Subclass 500 student visas. Trusted education consultants for Indian students." />
+        <title>Study in Australia | Student Visa Experts | Studypath education</title>
+        <meta name="description" content="Studypath helps Indian students study in Australia — admissions, scholarships, and Subclass 500 student visas. Trusted education consultants for Indian students." />
       </Helmet>
       {hero && <HeroSection {...hero} />}
     

@@ -1,11 +1,11 @@
 {
-  "brandName": "Syona Group of Consultants",
+  "brandName": "Studypath education",
   "primaryColor": "#0B66C3",
   "whatsappGreen": "#25D366",
-  "whatsappNumber": "919876543210",
+  "whatsappNumber": "61470351792",
   "email": "info@syonaconsultants.com",
-  "phone": "+91 9876543210",
-  "address": "Level 5, Skyline Tower, Sydney NSW, Australia",
+  "phone": "+61 431 041 182",
+  "address": "530 Little Collins St, Melbourne VIC 3000",
   "social": {
     "facebook": "#",
     "instagram": "#",
@@ -18,5 +18,5 @@
     { "label": "Contact", "href": "/contact" },
     { "label": "Book Consultation", "href": "/book", "variant": "button" }
   ],
-  "disclaimer": "Syona Group of Consultants is a private education and visa consultancy and is not affiliated with any government agency."
+  "disclaimer": "Studypath education is a private education and visa consultancy and is not affiliated with any government agency."
 }

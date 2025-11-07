@@ -5,14 +5,14 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Contact | Free Consultation | Syona Group of Consultants</title>
-        <meta name="description" content="Book a free consultation with Syona Group of Consultants. Get expert guidance on Australian universities, admissions, and student visas for Indian students." />
+        <title>Contact | Free Consultation | Studypath education</title>
+        <meta name="description" content="Book consultation with Studypath education. Get expert guidance on Australian universities, admissions, and student visas for Indian students." />
       </Helmet>
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Book a Free Consultation</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Book Consultation</h1>
             <p className="text-gray-700 mb-6">Speak with our student visa experts and plan your study in Australia journey with confidence.</p>
             <div className="space-y-2 text-gray-800">
               <p><strong>Phone:</strong> {contact.phone}</p>
