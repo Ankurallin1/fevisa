@@ -6,6 +6,7 @@ import Universities from '../pages/Universities';
 import UniversityDetail from '../pages/UniversityDetail';
 import ServiceDetail from '../pages/ServiceDetail';
 import VisaDetail from '../pages/VisaDetail';
+import Contact from '../pages/Contact';
 import Book from '../pages/Book';
 import BookingConfirm from '../pages/BookingConfirm';
 import Reschedule from '../pages/Reschedule';
@@ -45,6 +46,14 @@ export const router = createBrowserRouter([
         element: (
           <OpenRoute>
             <Universities />
+          </OpenRoute>
+        ),
+      },
+      {
+        path: 'contact',
+        element: (
+          <OpenRoute>
+            <Contact />
           </OpenRoute>
         ),
       },

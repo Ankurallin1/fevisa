@@ -1,194 +1,194 @@
 [
-    {
-      "id": "student-visa",
-      "slug": "student-visa",
-      "name": "Student Visa",
-      "shortDesc": "Complete student visa application support",
-      "longDesc": "Comprehensive student visa assistance for international students. We guide you through the entire process from document preparation to visa approval, ensuring your study abroad dreams become reality.",
-      "inclusions": [
-        "Visa eligibility assessment",
-        "Document preparation & verification",
-        "Financial documentation support",
-        "Interview preparation & coaching",
-        "Post-approval guidance"
-      ],
-      "exclusions": [
-        "Visa application fees",
-        "Medical examination costs",
-        "Biometric appointment fees"
-      ],
-      "supportedCountries": ["USA", "Canada", "UK", "Australia", "Germany", "Netherlands", "Ireland", "New Zealand"],
-      "startingPrice": 500,
-      "durationMin": 75,
-      "faqs": [
-        {
-          "q": "How long does the student visa process take?",
-          "a": "Processing times vary by country: USA (2-4 weeks), Canada (4-8 weeks), UK (3-6 weeks), Australia (2-4 weeks)."
-        },
-        {
-          "q": "What financial documents are required?",
-          "a": "Bank statements, scholarship letters, sponsor letters, and proof of sufficient funds for tuition and living expenses."
-        }
-      ]
-    },
-    {
-      "id": "work-visa",
-      "slug": "work-visa",
-      "name": "Work Visa",
-      "shortDesc": "Professional work authorization services",
-      "longDesc": "Expert guidance for work visa applications including job search assistance, employer sponsorship, and work permit processing for skilled professionals.",
-      "inclusions": [
-        "Job search support",
-        "Employer liaison",
-        "Work permit application",
-        "Documentation assistance",
-        "Relocation guidance"
-      ],
-      "exclusions": [
-        "Job placement guarantee",
-        "Work permit fees",
-        "Relocation costs"
-      ],
-      "supportedCountries": ["USA", "Canada", "UK", "Australia", "Singapore", "UAE", "Germany", "Netherlands"],
-      "startingPrice": 500,
-      "durationMin": 60,
-      "faqs": [
-        {
-          "q": "Do I need a job offer before applying?",
-          "a": "Yes, most work visas require a valid job offer and employer sponsorship."
-        },
-        {
-          "q": "What is the success rate for work visas?",
-          "a": "Our success rate is 95% for qualified candidates with proper documentation."
-        }
-      ]
-    },
-    {
-      "id": "tourist-visa",
-      "slug": "tourist-visa",
-      "name": "Tourist Visa",
-      "shortDesc": "Quick and easy tourist visa processing",
-      "longDesc": "Fast-track tourist visa applications for leisure travel, family visits, and short-term stays in your dream destinations.",
-      "inclusions": [
-        "Application preparation",
-        "Document verification",
-        "Submission assistance",
-        "Status tracking",
-        "Collection support"
-      ],
-      "exclusions": [
-        "Visa application fees",
-        "Travel insurance",
-        "Flight bookings"
-      ],
-      "supportedCountries": ["USA", "UK", "Schengen", "Canada", "Australia", "Japan", "Singapore", "UAE"],
-      "startingPrice": 500,
-      "durationMin": 30,
-      "faqs": [
-        {
-          "q": "How quickly can I get a tourist visa?",
-          "a": "Most tourist visas can be processed within 7-15 business days."
-        },
-        {
-          "q": "What documents do I need?",
-          "a": "Passport, photographs, travel itinerary, financial documents, and accommodation proof."
-        }
-      ]
-    },
-    {
-      "id": "family-visa",
-      "slug": "family-visa",
-      "name": "Family Visa",
-      "shortDesc": "Reunite with your loved ones abroad",
-      "longDesc": "Comprehensive family visa services for spouses, children, and dependent family members to reunite with their families overseas.",
-      "inclusions": [
-        "Relationship documentation",
-        "Sponsor verification",
-        "Application preparation",
-        "Interview coaching",
-        "Family reunification support"
-      ],
-      "exclusions": [
-        "Medical examinations",
-        "Police clearance fees",
-        "Translation costs"
-      ],
-      "supportedCountries": ["USA", "Canada", "UK", "Australia", "Germany", "New Zealand", "Netherlands", "Ireland"],
-      "startingPrice": 500,
-      "durationMin": 90,
-      "faqs": [
-        {
-          "q": "What proof of relationship is required?",
-          "a": "Marriage certificates, birth certificates, and other official documents proving family relationships."
-        },
-        {
-          "q": "Can I include my children in the application?",
-          "a": "Yes, dependent children under 21 can typically be included in family visa applications."
-        }
-      ]
-    },
-    {
-      "id": "business-visa",
-      "slug": "business-visa",
-      "name": "Business Visa",
-      "shortDesc": "Business travel and investment visas",
-      "longDesc": "Specialized services for business travelers, investors, and entrepreneurs seeking international opportunities and business expansion.",
-      "inclusions": [
-        "Business plan preparation",
-        "Investment documentation",
-        "Meeting arrangements",
-        "Visa application",
-        "Business networking"
-      ],
-      "exclusions": [
-        "Business registration fees",
-        "Investment capital",
-        "Travel expenses"
-      ],
-      "supportedCountries": ["USA", "Canada", "UK", "Australia", "Singapore", "UAE", "Germany", "Netherlands"],
-      "startingPrice": 500,
-      "durationMin": 45,
-      "faqs": [
-        {
-          "q": "What is the minimum investment required?",
-          "a": "Investment requirements vary by country, typically ranging from $50,000 to $500,000."
-        },
-        {
-          "q": "Can I work with a business visa?",
-          "a": "Business visas typically allow business activities but may have restrictions on employment."
-        }
-      ]
-    },
-    {
-      "id": "immigration-consultation",
-      "slug": "immigration-consultation",
-      "name": "Immigration Consultation",
-      "shortDesc": "Expert immigration advice and planning",
-      "longDesc": "Comprehensive immigration consultation services including pathway planning, document review, and strategic guidance for your immigration journey.",
-      "inclusions": [
-        "Immigration assessment",
-        "Pathway planning",
-        "Document review",
-        "Strategy development",
-        "Ongoing support"
-      ],
-      "exclusions": [
-        "Application fees",
-        "Legal representation",
-        "Government processing fees"
-      ],
-      "supportedCountries": ["All Major Destinations"],
-      "startingPrice": 500,
-      "durationMin": 60,
-      "faqs": [
-        {
-          "q": "What does the consultation include?",
-          "a": "Initial assessment, pathway recommendations, document checklist, and strategic planning session."
-        },
-        {
-          "q": "How long is the consultation valid?",
-          "a": "Our recommendations and guidance remain valid for 6 months from the consultation date."
-        }
-      ]
-    }
+  {
+    "id": "university-course-selection",
+    "slug": "university-course-selection",
+    "name": "University & Course Selection",
+    "shortDesc": "Personalized guidance to match your interests, career goals, and financial plans with the best universities in Australia.",
+    "longDesc": "Our expert consultants help you choose the right university and course based on your academic background, career aspirations, and budget. We analyze your profile and recommend the best-fit options from top Australian universities.",
+    "inclusions": [
+      "Profile assessment and career counseling",
+      "University and course recommendations",
+      "Tuition fee and scholarship analysis",
+      "Campus and location guidance",
+      "Application strategy planning"
+    ],
+    "exclusions": [
+      "Application fees",
+      "University application submission",
+      "Travel costs"
+    ],
+    "supportedCountries": ["Australia"],
+    "startingPrice": 0,
+    "durationMin": 60,
+    "faqs": [
+      {
+        "q": "How do you help me choose the right university?",
+        "a": "We assess your academic profile, career goals, and budget to recommend universities and courses that best match your aspirations and financial situation."
+      },
+      {
+        "q": "Do you charge for university selection consultation?",
+        "a": "Our initial consultation is free. We help you understand your options and guide you through the selection process."
+      }
+    ]
+  },
+  {
+    "id": "application-assistance",
+    "slug": "application-assistance",
+    "name": "Application Assistance",
+    "shortDesc": "Step-by-step help with documentation, SOPs, and deadlines to ensure strong, compliant applications.",
+    "longDesc": "We provide comprehensive support for your university application, including document preparation, Statement of Purpose (SOP) writing, reference letters, and ensuring all deadlines are met.",
+    "inclusions": [
+      "Document checklist and verification",
+      "SOP writing and review",
+      "Reference letter guidance",
+      "Application form assistance",
+      "Deadline tracking and reminders"
+    ],
+    "exclusions": [
+      "University application fees",
+      "Document translation costs",
+      "Official transcript fees"
+    ],
+    "supportedCountries": ["Australia"],
+    "startingPrice": 0,
+    "durationMin": 90,
+    "faqs": [
+      {
+        "q": "What documents do I need for university applications?",
+        "a": "Typically, you'll need academic transcripts, English test scores, passport copy, SOP, reference letters, and financial documents. We provide a detailed checklist based on your chosen university."
+      },
+      {
+        "q": "Can you help me write my Statement of Purpose?",
+        "a": "Yes, our team helps you craft a compelling SOP that highlights your strengths and aligns with university requirements."
+      }
+    ]
+  },
+  {
+    "id": "visa-consultation",
+    "slug": "visa-consultation",
+    "name": "Visa Consultation",
+    "shortDesc": "End-to-end student visa support for Subclass 500 and other streams — fast, transparent, and compliant with DHA guidelines.",
+    "longDesc": "Expert guidance for Australian student visa (Subclass 500) applications. We ensure all documentation is complete, compliant with Department of Home Affairs (DHA) requirements, and submitted correctly for faster processing.",
+    "inclusions": [
+      "Visa eligibility assessment",
+      "Document preparation and verification",
+      "GTE (Genuine Temporary Entrant) statement assistance",
+      "Financial documentation support",
+      "Application submission guidance",
+      "Status tracking and updates"
+    ],
+    "exclusions": [
+      "Visa application fees (AUD $650)",
+      "Medical examination costs",
+      "Biometric appointment fees"
+    ],
+    "supportedCountries": ["Australia"],
+    "startingPrice": 0,
+    "durationMin": 120,
+    "faqs": [
+      {
+        "q": "How long does the student visa process take?",
+        "a": "Australian student visa (Subclass 500) processing typically takes 2-4 weeks, but can vary based on individual circumstances and peak periods."
+      },
+      {
+        "q": "What is a GTE statement?",
+        "a": "Genuine Temporary Entrant (GTE) statement explains your genuine intention to study in Australia temporarily. We help you write a compelling GTE statement."
+      }
+    ]
+  },
+  {
+    "id": "scholarship-guidance",
+    "slug": "scholarship-guidance",
+    "name": "Scholarship Guidance",
+    "shortDesc": "Assistance identifying scholarships and fee waivers that best match your academic profile.",
+    "longDesc": "We help you identify and apply for scholarships, grants, and fee waivers available for international students in Australia. Our team matches your profile with suitable opportunities and guides you through the application process.",
+    "inclusions": [
+      "Scholarship eligibility assessment",
+      "Scholarship database access",
+      "Application guidance",
+      "Essay and documentation support",
+      "Deadline tracking"
+    ],
+    "exclusions": [
+      "Scholarship application fees (if any)",
+      "Document certification costs"
+    ],
+    "supportedCountries": ["Australia"],
+    "startingPrice": 0,
+    "durationMin": 60,
+    "faqs": [
+      {
+        "q": "What scholarships are available for Indian students?",
+        "a": "Australian universities offer various scholarships including merit-based, need-based, and country-specific scholarships. We help identify the best options for your profile."
+      },
+      {
+        "q": "When should I apply for scholarships?",
+        "a": "Scholarship deadlines often align with university application deadlines. We help you plan and apply early to maximize your chances."
+      }
+    ]
+  },
+  {
+    "id": "pre-departure-post-arrival",
+    "slug": "pre-departure-post-arrival",
+    "name": "Pre-Departure & Post-Arrival Support",
+    "shortDesc": "We help you with accommodation, travel, insurance, and orientation — making your move stress-free.",
+    "longDesc": "Comprehensive support before and after you arrive in Australia. From booking accommodation and travel arrangements to orientation and settling in, we ensure a smooth transition to your new academic life.",
+    "inclusions": [
+      "Accommodation assistance",
+      "Travel planning guidance",
+      "Health insurance recommendations",
+      "Airport pickup coordination",
+      "Orientation and settling-in support",
+      "Local community connections"
+    ],
+    "exclusions": [
+      "Accommodation costs",
+      "Travel expenses",
+      "Insurance premiums"
+    ],
+    "supportedCountries": ["Australia"],
+    "startingPrice": 0,
+    "durationMin": 45,
+    "faqs": [
+      {
+        "q": "Do you help with finding accommodation?",
+        "a": "Yes, we provide guidance on accommodation options including on-campus housing, homestays, and private rentals, and help you make informed decisions."
+      },
+      {
+        "q": "What support do you provide after I arrive?",
+        "a": "We help with orientation, connecting you with local Indian student communities, and provide ongoing support for any questions or challenges you face."
+      }
+    ]
+  },
+  {
+    "id": "ielts-pte-preparation",
+    "slug": "ielts-pte-preparation",
+    "name": "IELTS & PTE Preparation",
+    "shortDesc": "Expert-led test prep to help you achieve the scores your university requires.",
+    "longDesc": "Comprehensive coaching for IELTS and PTE Academic tests. Our expert instructors help you understand test formats, practice effectively, and achieve the scores required by your chosen university.",
+    "inclusions": [
+      "Test format and strategy guidance",
+      "Practice materials and mock tests",
+      "Writing and speaking feedback",
+      "Score improvement tips",
+      "Test booking assistance"
+    ],
+    "exclusions": [
+      "Test registration fees",
+      "Official test materials"
+    ],
+    "supportedCountries": ["Australia"],
+    "startingPrice": 0,
+    "durationMin": 90,
+    "faqs": [
+      {
+        "q": "Which test should I take - IELTS or PTE?",
+        "a": "Both are accepted by Australian universities. We help you choose based on your strengths, test availability, and university requirements."
+      },
+      {
+        "q": "What scores do I need?",
+        "a": "Score requirements vary by university and program. Typically, undergraduate programs require IELTS 6.0-6.5 or PTE 50-58, while postgraduate programs may require higher scores."
+      }
+    ]
+  }
 ]
