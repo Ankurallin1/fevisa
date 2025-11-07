@@ -1,27 +1,22 @@
 {
-  "brandName": "VisasPro Services",
-  "countryFocus": "Global",
-  "primaryColor": "#2563EB",
+  "brandName": "Studypath education",
+  "primaryColor": "#0B66C3",
   "whatsappGreen": "#25D366",
-  "whatsappNumber": "1234567890",
-  "email": "hello@eduglobalconnect.com",
-  "phone": "+1 234 567 8900",
-  "address": "Global Education Hub, International Plaza",
+  "whatsappNumber": "61470351792",
+  "email": "info@syonaconsultants.com",
+  "phone": "+61 431 041 182",
+  "address": "530 Little Collins St, Melbourne VIC 3000",
   "social": {
     "facebook": "#",
     "instagram": "#",
-    "linkedin": "#",
-    "youtube": "#"
+    "linkedin": "#"
   },
   "nav": [
-    {
-      "label": "Services",
-      "href": "/services"
-    },
-    {
-      "label": "Universities",
-      "href": "/universities"
-    }
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Universities", "href": "/universities" },
+    { "label": "Contact", "href": "/contact" },
+    { "label": "Book Consultation", "href": "/book", "variant": "button" }
   ],
-  "disclaimer": "We are an independent education consultancy and not affiliated with any government or university."
+  "disclaimer": "Studypath education is a private education and visa consultancy and is not affiliated with any government agency."
 }

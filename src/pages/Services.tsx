@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { StaticContentLoader } from '../lib/utils/staticContentLoader';
 import type { Services } from '../lib/types/site';
@@ -35,6 +36,10 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Services | University Selection, Admissions, Visa | Studypath education</title>
+        <meta name="description" content="Personalized university and course selection, application assistance, Subclass 500 student visa support, scholarships, and IELTS/PTE prep for Indian students." />
+      </Helmet>
       <div className="bg-gradient-to-br from-blue-600 to-purple-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">

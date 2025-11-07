@@ -1,6 +1,6 @@
 {
-  "headline": "Your Global Education Journey Starts Here",
-  "subheadline": "Discover universities, secure admissions, and get your student visa with expert guidance. From university selection to post-arrival support, we're your trusted partner for international education.",
-  "primaryCta": { "label": "Start Your Journey", "href": "/book" },
-  "secondaryCta": { "label": "Explore Universities", "href": "/services" }
+  "headline": "Start Your Global Education Journey With Studypath education",
+  "subheadline": "Study in Australia. Get expert admission & student visa help. Start your journey with Studypath.",
+  "primaryCta": { "label": "Book Consultation", "href": "/contact" },
+  "secondaryCta": { "label": "Explore Universities", "href": "/universities" }
 }

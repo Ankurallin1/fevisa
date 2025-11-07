@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { StaticContentLoader } from '../lib/utils/staticContentLoader';
 import type { Hero, Services, Process, FAQs } from '../lib/types/site';
 import HeroSection from '../components/Hero';
 import ServicesGrid from '../components/ServicesGrid';
 import ProcessSteps from '../components/ProcessSteps';
-import FAQ from '../components/FAQ';
+// import FAQ from '../components/FAQ';
+import WhyChoose from '../components/WhyChoose';
+import Testimonials from '../components/Testimonials';
+import FAQSection from '../components/FAQSection';
+import ContactCTA from '../components/ContactCTA';
 
 export default function Home() {
   const [hero, setHero] = useState<Hero | null>(null);
@@ -46,8 +51,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Study in Australia | Student Visa Experts | Studypath education</title>
+        <meta name="description" content="Studypath helps Indian students study in Australia — admissions, scholarships, and Subclass 500 student visas. Trusted education consultants for Indian students." />
+      </Helmet>
       {hero && <HeroSection {...hero} />}
     
+      <WhyChoose />
 
       {process && (
         <section id="how" className="py-16 bg-white">
@@ -71,6 +81,8 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      <Testimonials />
 
       {/* Study Abroad Section */}
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
@@ -99,17 +111,7 @@ export default function Home() {
         </div>
       </section>
 
-      {faqs && (
-        <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Student Questions Answered</h2>
-              <p className="text-xl text-gray-600">Everything you need to know about studying abroad</p>
-            </div>
-            <FAQ faqs={faqs.faqs} />
-          </div>
-        </section>
-      )}
+      {faqs && <FAQSection />}
 
       {/* {contact && (
         <section id="contact" className="py-16 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
@@ -122,6 +124,8 @@ export default function Home() {
           </div>
         </section>
       )} */}
+
+      <ContactCTA />
     </div>
   );
 }

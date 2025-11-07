@@ -30,7 +30,7 @@ export default function Hero({ headline, subheadline, primaryCta, secondaryCta }
           {/* Text Content */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium mb-6">
-              🌍 Trusted by 10,000+ International Students
+              🌍 Your Global Education Journey Starts Here
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
